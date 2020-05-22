@@ -1,0 +1,41 @@
+{% extends 'shop/basic.html'%}
+{% block title %} Media {% endblock %}
+
+
+{% block body%}
+<embed type="application/pdf"
+src="file:///C:/Users/Viral/Desktop/Multithreading.pdf"
+width="500px" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"
+background-color="0xFF525659" top-toolbar-height="56" full-frame="" internalinstanceid="21"
+title="CHROME">
+
+<div class="container my-4">
+    <video width="1000" height="500" controls>
+  <source src="/media/{{allMedia.videofile}}" type="video/mp4">
+        <source src="/media/{{allMedia.videofile}}" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<br>
+
+    <audio controls>
+  <source src="/media/{{allMedia.audiofile}}" type="audio/mpeg">
+        <source src="/media/{{allMedia.audiofile}}" type="video/ogg">
+Your browser does not support the audio element.
+</audio>
+    <br>
+
+
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uhUgIT68CoU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe width="1000" height="500" src="{{allMedia.youtube}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<!--<iframe-->
+<!--    src="/media/{{allMedia.file1}}"-->
+<!--    frameBorder="0"-->
+<!--    scrolling="auto"-->
+<!--    height="100%"-->
+<!--    width="100%"-->
+<!--&gt;</iframe>-->
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'shop/basic.html' %}
+{% block title%} My Awesome Cart Tracker{% endblock %}
+{% block body %}
+<div class="container">
+
+    <div class="col my-4">
+        <div class="jumbotron">
+  <h1 class="display-4">
+      Payment status regarding your order Id {{response.ORDERID}}</h1>
+        {% if response.RESPCODE == '01' %}
+  <p class="lead">Your payment has been successfully done.</p>
+  <hr class="my-4">
+
+  <a class="btn btn-primary btn-lg" href="/shop/" role="button">Go To Home</a>
+
+        {% else %}
+       <p class="lead">Your payment was unsuccessfully.</p>
+        {% endif%}
+</div>
+    </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script>
+    localStorage.clear();
+</script>
+{% endblock %}
